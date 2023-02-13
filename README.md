@@ -219,8 +219,8 @@ For example, this means that all jobs executing a particular version of the Grad
 
 ### Using the caches read-only
 
-By default, the `gradle-build-action` will only write to the cache from Jobs on the default (`main`/`master`) branch.
-Jobs on other branches will read entries from the cache but will not write updated entries. 
+By default, the `gradle-build-action` will only write to the cache from merge queues and Jobs on the default (`main`/`master`) branch.
+Jobs on other branches will read entries from the cache but will not write updated entries.
 See [Optimizing cache effectiveness](#optimizing-cache-effectiveness) for a more detailed explanation.
 
 In some circumstances it makes sense to change this default, and to configure a workflow Job to read existing cache entries but not to write changes back.
